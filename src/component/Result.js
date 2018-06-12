@@ -1,26 +1,27 @@
 import React, { Component } from 'react';
-
 class Result extends React.Component {
+
    componentWillMount() {
-      console.log('Component WILL MOUNT!')
+      console.log('ComponentResult WILL MOUNT!')
    }
    componentDidMount() {
-      console.log('Component DID MOUNT!')
+      console.log('ComponentResult DID MOUNT!')
    }
    componentWillReceiveProps(newProps) {
-      console.log('Component WILL RECIEVE PROPS!')
+      console.log(newProps.text + 'ComponentResult WILL RECIEVE PROPS!')
    }
    shouldComponentUpdate(newProps, newState) {
       return true;
    }
    componentWillUpdate(nextProps, nextState) {
-      console.log('Component WILL UPDATE!');
+      console.log('ComponentResult WILL UPDATE!');
    }
    componentDidUpdate(prevProps, prevState) {
-      console.log('Component DID UPDATE!')
+
+      console.log('ComponentResult DID UPDATE! === My number:  ' + this.props.myNumber )
    }
    componentWillUnmount() {
-      console.log('Component WILL UNMOUNT!')
+      console.log('ComponentResult WILL UNMOUNT!')
    }
    render() {
       return (
